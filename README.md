@@ -129,4 +129,38 @@ module "log-archive" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
+
+No requirements.
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [aws_organizations_account.account](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/organizations_account) | resource |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_email"></a> [email](#input\_email) | After the Terraform docs: 'The email address of the owner to assign to the new member account. This email address must not already be associated with another AWS account.' | `string` | n/a | yes |
+| <a name="input_name"></a> [name](#input\_name) | After the Terraform docs: 'A friendly name for the member account.' | `string` | n/a | yes |
+| <a name="input_parent_id"></a> [parent\_id](#input\_parent\_id) | After the Terraform docs: 'Parent Organizational Unit ID or Root ID for the account. Defaults to the Organization default Root ID. A configuration must be present for this argument to perform drift detection.' | `string` | n/a | yes |
+| <a name="input_role_name"></a> [role\_name](#input\_role\_name) | After the Terraform docs: 'The name of an IAM role that Organizations automatically preconfigures in the new member account. This role trusts the master account, allowing users in the master account to assume the role, as permitted by the master account administrator. The role has administrator permissions in the new member account. (...)' | `string` | `"OrganizationAccountAccessRole"` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_account"></a> [account](#output\_account) | The whole account object as described in the Terraform docs: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/organizations_account#attributes-reference |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
