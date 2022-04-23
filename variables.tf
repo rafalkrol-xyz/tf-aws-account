@@ -1,5 +1,5 @@
 variable "name" {
-  description = "After the Terraform docs: 'A friendly name for the member account. "
+  description = "After the Terraform docs: 'A friendly name for the member account.'"
   type        = string
 }
 
@@ -16,5 +16,5 @@ variable "parent_id" {
 variable "role_name" {
   description = "After the Terraform docs: 'The name of an IAM role that Organizations automatically preconfigures in the new member account. This role trusts the master account, allowing users in the master account to assume the role, as permitted by the master account administrator. The role has administrator permissions in the new member account. (...)'"
   type        = string
-  default     = null
+  default     = "OrganizationAccountAccessRole" # Read more here: https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_access.html
 }
